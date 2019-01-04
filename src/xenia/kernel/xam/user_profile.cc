@@ -19,7 +19,7 @@ namespace xam {
 
 UserProfile::UserProfile() {
   xuid_ = 0xBABEBABEBABEBABE;
-  name_ = "User";
+  name_ = "zkitx";
 
   // https://cs.rin.ru/forum/viewtopic.php?f=38&t=60668&hilit=gfwl+live&start=195
   // https://github.com/arkem/py360/blob/master/py360/constants.py
@@ -73,6 +73,8 @@ UserProfile::UserProfile() {
   AddSetting(std::make_unique<Int32Setting>(0x10040038, 0));
   // XPROFILE_GAMERCARD_TITLE_ACHIEVEMENTS_EARNED
   AddSetting(std::make_unique<Int32Setting>(0x10040039, 0));
+  // XboxLiveServiceProvider
+  AddSetting(std::make_unique<Int32Setting>(0x1004003F, 6));
 
   // If we set this, games will try to get it.
   // XPROFILE_GAMERCARD_PICTURE_KEY
